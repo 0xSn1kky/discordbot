@@ -119,15 +119,6 @@ async def invite(ctx):
     await ctx.channel.purge(limit=2)
     await ctx.author.send(f"{name.mention} Вот ссылка 🔗 чтобы пригласить данного бота на сервер: {cfg.invitelink}")
  
-# Я хз будет ли работать этот код (я его не тестил)   
-@client.command(pass_text=True)
-@commands.has_permissions(administrator = True)
-async def banlist(ctx):
-    bans = await ctx.guild.bans()
-    for bans in banlist:
-        await ctx.send(f"Все баны: {banlist}")
-
-
 
 
 @client.command(pass_context=True)
